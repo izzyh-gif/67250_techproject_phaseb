@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Isabella Hu">
+        <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems, Ticket Page">
+        <meta name="description" content="Ticket Page">
+        <title>Tickets - MonoMuse</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    </head>
+    
+    <body onload="addYear()">
+        <div class = "container">  
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+        <nav class = "nav_bar">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="buytickets.html" class = "active">Buy Tickets</a>
+        </nav>
+        <main class="main">
+        <table class = "ticketInfo"> <!--price table--> 
+            <tr>
+                <th>Ticket Type</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Adult</td>
+                <td>General Admission for ages 18+. Under 18 free of charge</td>
+                <td>$20.00</td>
+            </tr>
+            <tr>
+                <td>Student</td>
+                <td>Student ID required for discount</td>
+                <td>$10.00</td>
+            </tr>
+            <tr>
+                <td>Member</td>
+                <td>Member ID required</td>
+                <td>$15.00</td>
+            </tr>
+        </table> 
+            
+        <table class = "calendar" border="1">
+            <thead>
+                <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1 <br><button class = "buyNow">Buy Now</button></td>
+                <td>2 <br><button class = "buyNow">Buy Now</button></td>
+                <td>3</td>
+                <td>4 <br><button class = "buyNow">Buy Now</button></td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>6 <br><button class = "buyNow">Buy Now</button></td>
+                <td>7</td>
+                <td>8 <br><button class = "buyNow">Buy Now</button></td>
+                <td>9</td>
+                <td>10 <br><button class = "buyNow">Buy Now</button></td>
+                <td>11</td>
+                </tr>
+                <tr>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15<br><button class = "buyNow">Buy Now</button></td>
+                <td>16</td>
+                <td>17 <br><button class = "buyNow">Buy Now</button></td>
+                <td>18</td>
+                </tr>
+                <tr>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24 <br><button class = "buyNow">Buy Now</button></td>
+                <td>25</td>
+                </tr>
+                <tr>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29<br><button class = "buyNow">Buy Now</button></td>
+                <td>30</td>
+                <td></td>
+                <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form id = "purchaseForm">
+            <label for="name">Name: (required)</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email: (required)</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="quantity">Ticket Quantity: (required)</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+            <label for="selected_date">Selected Date: (required)</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        </main>
+        <footer class = "footer"><p id="copyYear"></p></footer>
+        </div>
+    <script src="../static/script.js"></script>  
+    </body>
+</html>
