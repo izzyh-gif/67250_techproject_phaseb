@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Isabella Hu">
+        <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems, Exhibition Page">
+        <meta name="description" content="Exhibition Page">
+        <title>Exhibitions - MonoMuse</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    </head>
+    
+    <body onload="addYear()">
+    <div class = "container">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+        <nav class = "nav_bar">
+            <button class="hamburger" type="button" onclick="toggleMenu()">
+                <div class = "hamburgerLine"></div>
+                <div class = "hamburgerLine"></div>
+                <div class = "hamburgerLine"></div>
+            </button>
+                <a href="../index.html">Home</a>
+                <a href="explore.html">About Us</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="buytickets.html" class = "active">Buy Tickets</a>
+                <a href="donate.html">Donate</a>
+        </nav>
+        <main class="main">
+        <div class = "exhibitionsContainer">
+            <div class = "slide is-active">
+                <h3 class = "header">Exhibition 1: Digital Horizons</h3>
+                <img class = "exhibitionImage" src="../static/digitalhorizons.png" alt="Digital Horizons Exhibition Image">
+                <p>Exploring how digital technology shapes contemporary art. Through interactive installations and virtual experiences, it highlights how artists push creative boundaries and invites visitors to engage with art in dynamic, innovative ways.</p>
+            </div>
+            <div class = "slide">
+                <h3 class = "header">Exhibition 2: Interactive Narratives</h3>
+                <img class = "exhibitionImage" src="../static/interactivenarratives.png" alt="Interactive Narratives Exhibition Image">
+                <p>Exploring how artists harness technology, from early mechanical tools to modern digital media, to expand creative possibilities. Featuring kinetic sculptures, light-based works, and interactive design, it highlights the evolving relationship between human imagination and technological innovation.</p>
+            </div>
+            <div class = "slide">
+                <h3 class = "header">Exhibition 3: Electric Canvas</h3>
+                <img class = "exhibitionImage" src="../static/electriccanvas.png" alt="Electric Canvas Exhibition Image">
+                <p>Exploring how artists harness technology, from early mechanical tools to modern digital media, to expand creative possibilities. Featuring kinetic sculptures, light-based works, and interactive design, it highlights the evolving relationship between human imagination and technological innovation.</p>
+            </div>
+        </div>
+        <div id = "slideControls">
+            <button id="prev" onclick="changeSlide(-1)">Prev</button>
+            <button id="next" onclick="changeSlide(1)">Next</button>
+        </div>
+        <iframe src="https://www.youtube.com/embed/Mc2q595Fzj8?si=TSG38wWnBFVL6B6L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </main>
+        <footer class = "footer"><p id="copyYear"></p></footer>
+    </div>
+    <script src="../static/script.js"></script>
+    </body>
+</html>
